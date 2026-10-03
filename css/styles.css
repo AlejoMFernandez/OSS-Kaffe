@@ -330,7 +330,7 @@ body.intro-on .hero__title .ln,body.intro-on .hero__foot,body.intro-on .hero__ph
 
 @media (max-width:900px){
   .rush{grid-template-columns:minmax(0,1fr);gap:36px;padding:80px var(--pad)}
-  .rush__right{order:-1}
+  .rush__cup{max-width:340px}
   .agenda{padding:80px var(--pad)}
   .agenda__row{margin-right:calc(var(--pad)*-1);padding-right:var(--pad)}
   .acard{flex:0 0 72vw;min-height:320px}
@@ -338,3 +338,5 @@ body.intro-on .hero__title .ln,body.intro-on .hero__foot,body.intro-on .hero__ph
 }
 @media (prefers-reduced-motion:reduce){.intro{display:none}}
 .btn[hidden]{display:none}
+/* fotos con el café abajo: subir el encuadre */
+.rush__cup img[src*="en-mano"],.cupwin__clip img[src*="en-mano"]{object-position:50% 96%}
