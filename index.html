@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ÖSS Kaffe · Café en mano</title>
+<meta name="description" content="Café de especialidad al paso. Empezó en un garaje de Belgrano; hoy hay öss en Buenos Aires, Barcelona y Madrid.">
+<meta name="theme-color" content="#0B0C10">
+<link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=JetBrains+Mono:wght@700&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css?v=4">
+<script>try{if(sessionStorage.getItem("oss-intro")||matchMedia("(prefers-reduced-motion: reduce)").matches)document.documentElement.classList.add("no-intro")}catch(e){}</script>
+</head>
+<body class="intro-on">
+
+<!-- Taza öss como recorte (clipPath reutilizable) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <clipPath id="taza" clipPathUnits="objectBoundingBox">
+      <path d="M0.993 0.014 L0.983 0.001 L0.876 0.000 L0.022 0.001 L0.010 0.008 L0.004 0.017 L0.000 0.031 L0.001 0.074 L0.004 0.085 L0.003 0.096 L0.037 0.440 L0.058 0.604 L0.076 0.735 L0.091 0.812 L0.094 0.817 L0.095 0.832 L0.118 0.922 L0.134 0.962 L0.164 0.985 L0.197 0.993 L0.212 0.993 L0.220 0.997 L0.341 0.999 L0.584 0.997 L0.630 0.989 L0.646 0.982 L0.663 0.971 L0.677 0.949 L0.690 0.908 L0.720 0.782 L0.746 0.617 L0.771 0.421 L0.780 0.399 L0.791 0.382 L0.811 0.368 L0.840 0.368 L0.843 0.372 L0.850 0.372 L0.886 0.399 L0.911 0.407 L0.912 0.410 L0.934 0.400 L0.945 0.385 L0.957 0.350 L0.958 0.332 L0.973 0.267 L0.991 0.144 L0.993 0.112 L0.997 0.101 L0.999 0.031Z"/>
+    </clipPath>
+  </defs>
+</svg>
+
+<!-- INTRO · la taza se llena -->
+<div class="intro" id="intro" aria-hidden="true">
+  <div class="intro__cup" id="introCup">
+    <svg viewBox="0 0 100 72">
+      <defs><clipPath id="introClip"><path d="M99.3 1 98.3.1 87.6 0 2.2.1 1 .6.4 1.2 0 2.2.1 5.3.4 6.1.3 6.9 3.7 31.7 5.8 43.5 7.6 52.9 9.1 58.5 9.5 59.9 11.8 66.4 13.4 69.3 16.4 70.9 19.7 71.5 22 71.8 34.1 71.9 58.4 71.8 63 71.2 66.3 69.9 67.7 68.3 69 65.4 72 56.3 74.6 44.4 77.1 30.3 78 28.7 79.1 27.5 81.1 26.5 84 26.5 85 26.8 88.6 28.7 91.1 29.3 93.4 28.8 94.5 27.7 95.7 25.2 95.8 23.9 97.3 19.2 99.1 10.4 99.3 8.1 99.7 7.3 99.9 2.2Z"/></clipPath></defs>
+      <g clip-path="url(#introClip)">
+        <g id="introCoffee" transform="translate(0 72)">
+          <path class="intro__wave" fill="#7a4a24" d="M0 4 Q12.5 0 25 4 T50 4 T75 4 T100 4 T125 4 T150 4 V90 H0Z"/>
+          <rect x="0" y="9" width="150" height="90" fill="#4a2a14"/>
+        </g>
+      </g>
+      <path d="M99.3 1 98.3.1 87.6 0 2.2.1 1 .6.4 1.2 0 2.2.1 5.3.4 6.1.3 6.9 3.7 31.7 5.8 43.5 7.6 52.9 9.1 58.5 9.5 59.9 11.8 66.4 13.4 69.3 16.4 70.9 19.7 71.5 22 71.8 34.1 71.9 58.4 71.8 63 71.2 66.3 69.9 67.7 68.3 69 65.4 72 56.3 74.6 44.4 77.1 30.3 78 28.7 79.1 27.5 81.1 26.5 84 26.5 85 26.8 88.6 28.7 91.1 29.3 93.4 28.8 94.5 27.7 95.7 25.2 95.8 23.9 97.3 19.2 99.1 10.4 99.3 8.1 99.7 7.3 99.9 2.2Z" fill="none" stroke="#0B0C10" stroke-width="1.6"/>
+      <path class="intro__red" d="M99.3 1 98.3.1 87.6 0 2.2.1 1 .6.4 1.2 0 2.2.1 5.3.4 6.1.3 6.9 3.7 31.7 5.8 43.5 7.6 52.9 9.1 58.5 9.5 59.9 11.8 66.4 13.4 69.3 16.4 70.9 19.7 71.5 22 71.8 34.1 71.9 58.4 71.8 63 71.2 66.3 69.9 67.7 68.3 69 65.4 72 56.3 74.6 44.4 77.1 30.3 78 28.7 79.1 27.5 81.1 26.5 84 26.5 85 26.8 88.6 28.7 91.1 29.3 93.4 28.8 94.5 27.7 95.7 25.2 95.8 23.9 97.3 19.2 99.1 10.4 99.3 8.1 99.7 7.3 99.9 2.2Z" fill="#F2362F"/>
+    </svg>
+  </div>
+  <div class="intro__meta"><span class="intro__pct" id="introPct">0%</span><span class="intro__lbl" id="introLbl">MOLIENDO</span></div>
+  <button class="intro__skip" id="introSkip">Saltar</button>
+</div>
+
+<header class="nav" id="nav">
+  <a href="#top" class="brand" aria-label="öss kaffe — inicio">
+    <span class="brand__word">öss</span><span class="brand__tag">KAFFE<br>EN MANO</span>
+  </a>
+  <nav class="nav__links" id="menu" aria-label="Principal">
+    <a href="#ventanilla">Ventanilla</a>
+    <a href="#carta">Carta</a>
+    <a href="#metodos">Métodos</a>
+    <a href="#historia">Historia</a>
+    <a href="#agenda">Agenda</a>
+    <a href="#sucursales" class="nav__cta">¿Dónde hay un öss?</a>
+  </nav>
+  <button class="burger" id="burger" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
+</header>
+
+<main id="top">
+
+  <!-- HERO · afiche -->
+  <section class="hero">
+    <div class="hero__photo"><img src="img/fernando-barra.webp" alt="Fernando preparando café en la máquina Faema" fetchpriority="high"></div>
+    <h1 class="hero__title">
+      <span class="ln">un garaje,</span>
+      <span class="ln">una ventanilla,</span>
+      <span class="ln">un café</span>
+      <span class="ln">en mano.</span>
+    </h1>
+    <div class="hero__foot">
+      <p>Café de especialidad al paso. Empezó en la ventanilla de un garaje en Belgrano; hoy hay öss en Buenos Aires, Barcelona y Madrid.</p>
+      <a class="btn btn--dark" href="#sucursales">Ver sucursales →</a>
+    </div>
+    <svg class="hero__cup" viewBox="0 0 100 72" aria-hidden="true"><path d="M99.3 1 98.3.1 87.6 0 2.2.1 1 .6.4 1.2 0 2.2.1 5.3.4 6.1.3 6.9 3.7 31.7 5.8 43.5 7.6 52.9 9.1 58.5 9.5 59.9 11.8 66.4 13.4 69.3 16.4 70.9 19.7 71.5 22 71.8 34.1 71.9 58.4 71.8 63 71.2 66.3 69.9 67.7 68.3 69 65.4 72 56.3 74.6 44.4 77.1 30.3 78 28.7 79.1 27.5 81.1 26.5 84 26.5 85 26.8 88.6 28.7 91.1 29.3 93.4 28.8 94.5 27.7 95.7 25.2 95.8 23.9 97.3 19.2 99.1 10.4 99.3 8.1 99.7 7.3 99.9 2.2Z"/></svg>
+  </section>
+
+  <div class="ribbon ribbon--red" aria-hidden="true"><div class="ribbon__track"><span>café en mano ✦ pasá, pedí, llevá ✦ café en mano ✦ pasá, pedí, llevá ✦ </span><span>café en mano ✦ pasá, pedí, llevá ✦ café en mano ✦ pasá, pedí, llevá ✦ </span></div></div>
+
+  <!-- VENTANILLA · info -->
+  <section class="window" id="ventanilla">
+    <div class="window__text reveal">
+      <span class="kicker kicker--wood">CAFÉ DE ESPECIALIDAD · AL PASO</span>
+      <h2 class="display">pasá,<br>pedí,<br>llevá.</h2>
+      <p>öss es café para llevar en serio: granos de especialidad, baristas que saben lo que hacen y una ventanilla que da a la vereda. Si tenés tiempo, quedate; si no, te lo llevás en mano.</p>
+      <ul class="facts">
+        <li><b>Para llevar</b><span>o para tomar ahí, en vidrio</span></li>
+        <li><b>Especiales</b><span>Choco Marley, Extra Virgen, Össten</span></li>
+        <li><b>Dulce y salado</b><span>chipá, torta galesa, tostadas de masa madre</span></li>
+      </ul>
+      <div class="dots" id="cupDots" role="tablist" aria-label="Fotos"></div>
+    </div>
+    <figure class="cupwin reveal">
+      <div class="cupwin__clip" id="cupWin">
+        <img src="img/ventanilla.webp" alt="La ventanilla de madera, de noche" class="on">
+        <img src="img/latte-art.webp" alt="Latte art en taza öss" loading="lazy">
+        <img src="img/container-noche.webp" alt="El container encendido" loading="lazy">
+        <img src="img/en-mano.webp" alt="Café en mano" loading="lazy">
+        <img src="img/cartel-cielo.webp" alt="El cartel calado de öss contra el cielo" loading="lazy">
+      </div>
+      <figcaption id="cupCap">La ventanilla de madera, de noche</figcaption>
+    </figure>
+  </section>
+
+  <!-- CARTA -->
+  <section class="menu" id="carta">
+    <div class="menu__order reveal">
+      <div class="menu__pick">
+        <span class="kicker kicker--teal">LA CARTA · EN MANO</span>
+        <h2 class="display">¿qué<br>te sirvo?</h2>
+        <div class="chips" id="chips"></div>
+        <div class="menu__desc">
+          <div><b id="dName">Flat white</b><span class="price" id="dPrice">$6.000</span></div>
+          <p id="dDesc">Espresso doble + leche (8 oz).</p>
+        </div>
+      </div>
+      <div class="booth" aria-live="polite">
+        <div class="booth__frame"><span class="booth__word">öss</span><span class="booth__shelf"></span>
+          <img src="img/vaso-oss.webp" alt="" class="booth__deco" aria-hidden="true">
+        </div>
+        <div class="booth__counter"></div>
+        <div class="booth__cup served" id="cup">
+          <i class="steam"></i><i class="steam"></i><i class="steam"></i>
+          <svg viewBox="0 0 100 72" aria-hidden="true"><path d="M99.3 1 98.3.1 87.6 0 2.2.1 1 .6.4 1.2 0 2.2.1 5.3.4 6.1.3 6.9 3.7 31.7 5.8 43.5 7.6 52.9 9.1 58.5 9.5 59.9 11.8 66.4 13.4 69.3 16.4 70.9 19.7 71.5 22 71.8 34.1 71.9 58.4 71.8 63 71.2 66.3 69.9 67.7 68.3 69 65.4 72 56.3 74.6 44.4 77.1 30.3 78 28.7 79.1 27.5 81.1 26.5 84 26.5 85 26.8 88.6 28.7 91.1 29.3 93.4 28.8 94.5 27.7 95.7 25.2 95.8 23.9 97.3 19.2 99.1 10.4 99.3 8.1 99.7 7.3 99.9 2.2Z"/></svg>
+          <span id="cupLabel">Flat white</span>
+        </div>
+        <div class="booth__status"><span id="status">Listo. Café en mano.</span><span>Pedido n.º <b id="num">1894</b></span></div>
+      </div>
+    </div>
+
+    <div class="menu__full reveal">
+      <div class="tabs" role="tablist" aria-label="Carta completa">
+        <button role="tab" aria-selected="true" data-tab="cafes">Cafés</button>
+        <button role="tab" aria-selected="false" data-tab="especiales">Especiales</button>
+        <button role="tab" aria-selected="false" data-tab="frios">Fríos</button>
+        <button role="tab" aria-selected="false" data-tab="tragos">Mocktail / trago</button>
+        <button role="tab" aria-selected="false" data-tab="otras">Infusiones y más</button>
+        <button role="tab" aria-selected="false" data-tab="dulce">Dulce</button>
+        <button role="tab" aria-selected="false" data-tab="salado">Salado</button>
+      </div>
+      <div class="list" id="list"></div>
+      <p class="note">Precios de referencia de la carta de enero de 2026. Pueden variar según la sucursal.</p>
+    </div>
+  </section>
+
+  <div class="ribbon ribbon--dark" aria-hidden="true"><div class="ribbon__track"><span>chemex ✦ v60 ✦ syphon ✦ aeropress ✦ cold drip ✦ prensa francesa ✦ clever ✦ </span><span>chemex ✦ v60 ✦ syphon ✦ aeropress ✦ cold drip ✦ prensa francesa ✦ clever ✦ </span></div></div>
+
+  <!-- MÉTODOS -->
+  <section class="methods" id="metodos">
+    <div class="methods__head reveal">
+      <span class="kicker kicker--red">SIN APURO, TAMBIÉN</span>
+      <h2 class="display">el café,<br>de muchas formas.</h2>
+      <p>Al paso no quiere decir a las apuradas. Además del espresso, en öss se filtra con distintos métodos. Preguntá qué grano hay ese día.</p>
+    </div>
+    <div class="methods__row" id="methodsRow">
+      <article class="mcard reveal"><img src="img/chemex.webp" alt="Chemex filtrando" loading="lazy"><div><b>Chemex</b><span>limpio y brillante</span></div></article>
+      <article class="mcard reveal"><img src="img/syphon.webp" alt="Syphon Hario encendido" loading="lazy"><div><b>Syphon</b><span>un show de vidrio y fuego</span></div></article>
+      <article class="mcard reveal"><img src="img/molienda.webp" alt="Molienda manual Comandante" loading="lazy"><div><b>V60 · AeroPress</b><span>molido en el momento</span></div></article>
+      <article class="mcard reveal"><img src="img/filtrado-chipa.webp" alt="Filtrado en vaso con pastelería" loading="lazy"><div><b>Filtrado del día</b><span>con algo dulce al lado</span></div></article>
+      <article class="mcard reveal"><img src="img/frios.webp" alt="Cafés fríos para llevar" loading="lazy"><div><b>Cold drip</b><span>para el calor</span></div></article>
+    </div>
+  </section>
+
+  <!-- ¿CUÁNTO TIEMPO TENÉS? -->
+  <section class="rush" id="apuro">
+    <div class="rush__left reveal">
+      <span class="kicker kicker--red">AL PASO, PERO A TU RITMO</span>
+      <h2 class="display">¿cuánto tiempo<br>tenés?</h2>
+      <div class="rush__big"><span id="rushNum">3</span><small id="rushUnit">minutos</small></div>
+      <label class="rush__label" for="rushRange">Mové la barra</label>
+      <input class="rush__range" id="rushRange" type="range" min="0" max="30" step="1" value="3">
+      <div class="rush__scale" aria-hidden="true"><span>CORRIENDO</span><span>UN RATO</span><span>TODA LA TARDE</span></div>
+    </div>
+    <div class="rush__right reveal">
+      <div class="rush__cup" id="rushCup">
+        <img src="img/cortado-vereda.webp" alt="Cortado en vaso sobre la vereda" loading="lazy">
+        <img src="img/en-mano.webp" alt="Café en mano" loading="lazy">
+        <img src="img/filtrado-chipa.webp" alt="Café filtrado con un chipá" loading="lazy">
+        <img src="img/flat-white.webp" alt="Flat white en taza de vidrio" loading="lazy">
+        <img src="img/salon-vigas.webp" alt="El salón con vigas de madera, para quedarse" loading="lazy">
+      </div>
+      <div class="rush__rec" id="rushRec" aria-live="polite">
+        <span>TE RECOMENDAMOS</span>
+        <b id="rushName">Flat white para llevar</b>
+        <p id="rushDesc">En vaso, con tapa, café en mano.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- HISTORIA -->
+  <section class="story" id="historia">
+    <div class="story__photo reveal"><img src="img/fernando.webp" alt="Fernando Iglesias Molli, fundador de öss" loading="lazy"></div>
+    <div class="story__text reveal">
+      <span class="kicker kicker--red">LA HISTORIA</span>
+      <h2 class="display">de oslo<br>a un garaje<br>en belgrano.</h2>
+      <p>Fernando Iglesias Molli es arquitecto. En un viaje a Oslo descubrió el café de especialidad y se lo trajo puesto. De vuelta en Buenos Aires, convirtió el garaje de su casa en Belgrano en una cafetería con ventanilla a la vereda.</p>
+      <p>El garaje se volvió punto de encuentro del barrio: vecinos, música, charla y café en mano. Después vinieron otras sucursales en la ciudad, y también Barcelona y Madrid.</p>
+      <ol class="timeline">
+        <li><span>01</span>Oslo · el primer café de especialidad</li>
+        <li><span>02</span>Roosevelt 1894 · la ventanilla del garaje</li>
+        <li><span>03</span>Buenos Aires · Barcelona · Madrid</li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- PASA EN ÖSS -->
+  <section class="agenda" id="agenda">
+    <div class="agenda__head reveal">
+      <div>
+        <span class="kicker kicker--wood">MÁS QUE CAFÉ</span>
+        <h2 class="display">pasa en <em>öss.</em></h2>
+      </div>
+      <p>Cursos, talleres, catas y noches raras. La ventanilla también es un punto de encuentro.</p>
+    </div>
+    <div class="agenda__row">
+      <a class="acard acard--poster reveal" href="https://www.instagram.com/osskaffe/" target="_blank" rel="noopener">
+        <img src="img/tipografia.webp" alt="Afiche: conferencia erótico performática con café" loading="lazy">
+        <span class="acard__meta acard__meta--chip"><span>[FECHA]</span><span>[SUCURSAL]</span></span>
+      </a>
+      <a class="acard acard--red reveal" href="#">
+        <span class="acard__meta"><span>CURSO</span><span>[FECHA]</span></span>
+        <span class="acard__t">curso de barista</span>
+        <span class="acard__d">Espresso, leche y latte art detrás de la barra. [CUPOS]</span>
+      </a>
+      <a class="acard acard--paper reveal" href="#">
+        <span class="acard__meta"><span>TALLER</span><span>[FECHA]</span></span>
+        <span class="acard__t">taller de cerámica</span>
+        <span class="acard__d">Hacé tu propia taza. Después, a llenarla.</span>
+      </a>
+      <a class="acard acard--teal reveal" href="#">
+        <span class="acard__meta"><span>CATA</span><span>[FECHA]</span></span>
+        <span class="acard__t">vinos y ostras</span>
+        <span class="acard__d">Una noche distinta en la barra.</span>
+      </a>
+      <a class="acard acard--wood reveal" href="#">
+        <span class="acard__meta"><span>NOCHE</span><span>[FECHA]</span></span>
+        <span class="acard__t">poesía con café</span>
+        <span class="acard__d">Micrófono abierto, café de filtro.</span>
+      </a>
+    </div>
+    <a class="btn btn--paper" href="#">Quiero enterarme · [WHATSAPP]</a>
+  </section>
+
+  <!-- GALERÍA -->
+  <section class="gallery" aria-label="Galería">
+    <div class="gallery__track" id="gallery">
+      <button><img src="img/barra-maquina.webp" alt="Barra con la máquina de espresso y el cartel öss" loading="lazy"></button>
+      <button><img src="img/vaso-latte.webp" alt="Latte en vaso öss" loading="lazy"></button>
+      <button><img src="img/salon-vigas.webp" alt="Salón con vigas de madera" loading="lazy"></button>
+      <button><img src="img/copa-dulce.webp" alt="Café frío con dulce de leche en copa" loading="lazy"></button>
+      <button><img src="img/ventana-jazz.webp" alt="Barra vista desde la vidriera" loading="lazy"></button>
+      <button><img src="img/flat-white.webp" alt="Flat white en taza de vidrio" loading="lazy"></button>
+      <button><img src="img/container-sol.webp" alt="El container al atardecer con gente esperando" loading="lazy"></button>
+      <button><img src="img/barra-verde.webp" alt="Barra con paredes verdes y reloj" loading="lazy"></button>
+      <button><img src="img/vaso-frio.webp" alt="Café frío en vaso de vidrio" loading="lazy"></button>
+      <button><img src="img/cortado-vereda.webp" alt="Cortado en vaso sobre la vereda" loading="lazy"></button>
+    </div>
+  </section>
+
+  <!-- SUCURSALES · tablero -->
+  <section class="board" id="sucursales">
+    <div class="board__left reveal">
+      <div class="board__head">
+        <h2 class="display">salidas</h2>
+        <span>ÖSS · DEPARTURES · AVGANG</span>
+      </div>
+      <div class="board__cols" aria-hidden="true"><span>DESTINO</span><span>DIRECCIÓN</span><span>CIUDAD</span></div>
+      <div class="board__rows" id="rows" role="list"></div>
+    </div>
+    <div class="board__right">
+      <article class="scard" id="scard">
+        <div class="scard__img" id="sImg"><span class="scard__code" id="sCode">BEL</span></div>
+        <div class="scard__body">
+          <b id="sName">Roosevelt 1894</b>
+          <span id="sCity">Belgrano · CABA</span>
+          <span id="sHours">Horario: [HORARIO]</span>
+          <div class="scard__btns">
+            <a class="btn btn--dark" id="sMaps" href="#" target="_blank" rel="noopener">Cómo llegar</a>
+            <a class="btn btn--line" id="sTel" href="#" hidden>Llamar</a>
+            <a class="btn btn--line" href="https://www.instagram.com/osskaffe/" target="_blank" rel="noopener">Instagram</a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="footer__top">
+    <div class="footer__brand">
+      <svg viewBox="0 0 100 72" aria-hidden="true"><path d="M99.3 1 98.3.1 87.6 0 2.2.1 1 .6.4 1.2 0 2.2.1 5.3.4 6.1.3 6.9 3.7 31.7 5.8 43.5 7.6 52.9 9.1 58.5 9.5 59.9 11.8 66.4 13.4 69.3 16.4 70.9 19.7 71.5 22 71.8 34.1 71.9 58.4 71.8 63 71.2 66.3 69.9 67.7 68.3 69 65.4 72 56.3 74.6 44.4 77.1 30.3 78 28.7 79.1 27.5 81.1 26.5 84 26.5 85 26.8 88.6 28.7 91.1 29.3 93.4 28.8 94.5 27.7 95.7 25.2 95.8 23.9 97.3 19.2 99.1 10.4 99.3 8.1 99.7 7.3 99.9 2.2Z"/></svg>
+      <span class="brand__word">öss</span><span class="brand__tag">KAFFE<br>EN MANO</span>
+    </div>
+    <div class="footer__cols">
+      <div><b>Seguinos</b><a href="https://www.instagram.com/osskaffe/" target="_blank" rel="noopener">@osskaffe</a></div>
+      <div><b>Contacto</b><a href="tel:+541121754045">Devoto · 11 2175-4045</a></div>
+      <div><b>Ciudades</b><span>Buenos Aires · Barcelona · Madrid</span></div>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <span>© öss kaffe</span>
+    <span class="credit">Sitio desarrollado por <a href="https://alejomfernandez.com.ar" target="_blank" rel="noopener">Alejo Martín Fernández</a></span>
+  </div>
+</footer>
+
+<div class="lightbox" id="lightbox" hidden>
+  <button class="lightbox__x" id="lbClose" aria-label="Cerrar">×</button>
+  <img id="lbImg" src="" alt="">
+</div>
+
+<script src="js/main.js?v=4"></script>
+</body>
+</html>
